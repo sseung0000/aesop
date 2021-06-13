@@ -8,6 +8,8 @@ contents
 
 .header h1 { position: absolute; top: 50%; left: 50%; -webkit-transform: translate(-50%, -50%); -ms-transform: translate(-50%, -50%); transform: translate(-50%, -50%); display: inline-block; width: 100px; height: 32px; }
 
+.header h1 a { display: block; width: 100%; height: 100%; background: url("../img/common/aesop_logo_white.svg") no-repeat center/cover; }
+
 .header .gnb_menu { float: left; }
 
 .header .gnb_menu li { position: relative; float: left; cursor: pointer; }
@@ -30,16 +32,18 @@ contents
 
 .header .utill_menu li a { padding-left: 12px; font-size: 15px; font-weight: 300; color: #fff; line-height: 90px; }
 
-/* header_sroll */
-.header_wrap.sroll { display: none; position: fixed; top: 0; background: #fff; border-bottom: 1px solid #ddd; z-index: 5; }
+/* header_scroll */
+.header_wrap.scroll { position: fixed; top: 0; background: #fff; border-bottom: 1px solid #ddd; z-index: 5; }
 
-.header_wrap.sroll .header .gnb_menu li::after { background: #222; }
+.header_wrap.scroll .header h1 a { background-image: url("../img/common/aesop_logo.svg"); }
 
-.header_wrap.sroll .header .gnb_menu li a { color: #222; }
+.header_wrap.scroll .header .gnb_menu li::after { background: #222; }
 
-.header_wrap.sroll .header .utill_menu li + li::before { background: #222; }
+.header_wrap.scroll .header .gnb_menu li a { color: #222; }
 
-.header_wrap.sroll .header .utill_menu li a { color: #666; }
+.header_wrap.scroll .header .utill_menu li + li::before { background: #222; }
+
+.header_wrap.scroll .header .utill_menu li a { color: #666; }
 
 /* .mo_header_wrap */
 .mo_header_wrap { display: none; }
@@ -213,12 +217,13 @@ contents
 	.btn.bg:hover button::after { width: 0; }
 	/* mo_header_wrap */
 	.mo_header_wrap { display: block; position: absolute; top: 0; width: 100%; z-index: 5; }
-	.mo_header { position: relative; height: 12.50vw; border-bottom: 0.21vw solid rgba(255, 255, 255, 0.5); }
-	.mo_header .btn_menu { float: left; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; -webkit-box-align: center; -ms-flex-align: center; align-items: center; width: 12.50vw; height: 12.50vw; cursor: pointer; }
+	.mo_header { position: relative; height: 14.50vw; border-bottom: 0.21vw solid rgba(255, 255, 255, 0.5); }
+	.mo_header .btn_menu { float: left; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; -webkit-box-align: center; -ms-flex-align: center; align-items: center; width: 14.50vw; height: 14.50vw; cursor: pointer; }
 	.mo_header .btn_menu::after { content: ''; display: block; width: 5.00vw; height: 5.00vw; background: url("../img/common/ico_menu.png") no-repeat center/cover; }
-	.mo_header .btn_search { float: right; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; -webkit-box-align: center; -ms-flex-align: center; align-items: center; width: 12.50vw; height: 12.50vw; cursor: pointer; }
+	.mo_header .btn_search { float: right; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; -webkit-box-align: center; -ms-flex-align: center; align-items: center; width: 14.50vw; height: 14.50vw; cursor: pointer; }
 	.mo_header .btn_search::after { content: ''; display: block; width: 5.00vw; height: 5.00vw; background: url("../img/common/ico_search.png") no-repeat center/cover; }
-	.mo_header h1 { position: absolute; top: 50%; left: 50%; -webkit-transform: translate(-50%, -50%); -ms-transform: translate(-50%, -50%); transform: translate(-50%, -50%); display: inline-block; width: 10.42vw; height: 3.33vw; }
+	.mo_header h1 { position: absolute; top: 50%; left: 50%; -webkit-transform: translate(-50%, -50%); -ms-transform: translate(-50%, -50%); transform: translate(-50%, -50%); display: inline-block; width: 20.42vw; height: 6.45vw; }
+	.mo_header h1 a { display: block; width: 100%; height: 100%; background: url("../img/common/aesop_logo_white.svg") no-repeat center/cover; }
 	.mo_gnb { display: block; }
 	.mo_gnb { position: fixed; top: 0; left: -100%; bottom: 0; width: 100%; height: 100%; z-index: 5; }
 	.mo_gnb::before { position: absolute; top: 0; bottom: 0; left: 0; right: 0; content: ""; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.5); z-index: -1; }
@@ -236,6 +241,11 @@ contents
 	.mo_gnb .gnb_menu .sub_menu { display: none; }
 	.mo_gnb .gnb_menu .sub_menu li { height: 6.25vw; line-height: 6.25vw; background: #ddd; border-bottom: 0.1vw solid rgba(255, 255, 255, 0.2); }
 	.mo_gnb .gnb_menu .sub_menu li a { font-size: 2.08vw; color: #222; }
+	/* mo_header_wrap_scroll */
+	.mo_header_wrap.scroll { position: fixed; top: 0; background: #fff; border-bottom: 1px solid #ddd; z-index: 7; }
+	.mo_header_wrap.scroll .mo_header h1 a { background-image: url("../img/common/aesop_logo.svg"); }
+	.mo_header_wrap.scroll .btn_search::after { background-image: url("../img/common/ico_search_b.png"); }
+	.mo_header_wrap.scroll .btn_menu::after { background-image: url("../img/common/ico_menu_b.png"); }
 	/* header */
 	.header { display: none; }
 	.header .gnb_menu { display: none; }
